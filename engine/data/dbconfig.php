@@ -1,12 +1,12 @@
 <?PHP
 
-define ("DBHOST", "localhost"); 
+define ("DBHOST", "hrr5mwqn9zs54rg4.chr7pe7iynqr.eu-west-1.rds.amazonaws.com"); 
 
-define ("DBNAME", "gals");
+define ("DBNAME", "xvtcqos9cg3eph3o");
 
-define ("DBUSER", "root");
+define ("DBUSER", "ah4zau4bp4b7yqzp");
 
-define ("DBPASS", "");  
+define ("DBPASS", "wq8uc01mbgpwtzm4");  
 
 define ("PREFIX", "dle");
 
