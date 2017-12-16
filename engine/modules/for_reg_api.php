@@ -60,32 +60,37 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
 			switch ($dle_api->external_register($post->name, $post->password1, $post->email, 4)) {
 
-				case -1:
-
+				case 1:
+					
 					$code = 1;
 
 					$reg_log = "Accept register";
 
 					break;
 
-				case -2:
+				case -1:
 
 					$reg_log = "Login exist";
 
 					break;
 
-				case -3:
+				case -2:
 
 					$reg_log = "Mail exist";
 
 					break;
 
+				case -3:
+
+					$reg_log = "Email incorrect";
+
+					break;
+					
 				case -4:
 
 					$reg_log = "Group error";
 
 					break;
-
 				default:
 
 					$reg_log = "Register error";
