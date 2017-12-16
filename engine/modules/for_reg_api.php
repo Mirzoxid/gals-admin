@@ -58,9 +58,9 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
 		if ($post->password1 === $post->password2 && $post->password1 !== "" && $post->name !== "" && $post->email !== "") {
 
-			switch ($aa = $dle_api->external_register($post->name, $post->password1, $post->email, 4)) {
+			switch ($dle_api->external_register($post->name, $post->password1, $post->email, 4)) {
 
-				case 1:
+				case -1:
 
 					$code = 1;
 
@@ -68,19 +68,19 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
 					break;
 
-				case 2:
+				case -2:
 
 					$reg_log = "Login exist";
 
 					break;
 
-				case 3:
+				case -3:
 
 					$reg_log = "Mail exist";
 
 					break;
 
-				case 4:
+				case -4:
 
 					$reg_log = "Group error";
 
