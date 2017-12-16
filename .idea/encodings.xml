@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/engine/cache/system/category.php" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/engine/inc/categories.php" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/engine/modules/main.php" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/engine/print.php" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/templates/Red/main.tpl" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/templates/kinodevil/collections/index.tpl" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/templates/kinodevil/collections/item_news.tpl" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/templates/kinodevil/main.tpl" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/templates/smartphone/css/engine.css" charset="windows-1251" />
+  </component>
+</project>

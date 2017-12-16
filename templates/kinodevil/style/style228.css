@@ -1,0 +1,73 @@
+/* CONTENT SECTIONS
+----------------------------------------------- */
+.section {margin-bottom:20px;}
+.section-title {margin-bottom:20px; line-height:40px;}
+.section-title h2, .section-title h1 {font-size:16px; text-transform:uppercase; font-weight:700; display:inline-block; 
+box-shadow:inset 0 -3px 0 0 #fcde03; position:relative;}
+.section-title a { display:inline-block; padding:0 15px; color:#000000; background-color:#fcde03; margin-left:30px;}
+.section-title a:hover {background-color:#fcd003;}
+.section-title i {margin-right:10px;}
+.section-items {margin:0 -10px;}
+.actors {padding:20px; color:#FFF; margin-bottom:0; background-position:center -30px; box-shadow:inset 0 600px 0 0 rgba(0,0,0,0.2);}
+.actors .section-title h2 {color:#fff;}
+.news-trailers {padding:20px; background:#f6f6f6; margin-bottom:0;}
+.news .section-items {margin:0;}
+.news {width:48%; float:left;}
+.trailers {width:48%; float:right;}
+.trailers .section-items {margin:0 -5px;}
+
+/* Выпадающее меню */
+.movie-item {position:relative; z-index:50; max-width:200px;}
+
+.active {z-index:100; position:relative;}
+.movie-img {height:210px; z-index:50; border:4px solid #fff; box-shadow:0 0 0 1px #e3e3e3; border-radius:2px;}
+.movie-series {position:absolute; left:0; bottom:0; z-index:50; width:100%; 
+background-color:#97ce68; color:#487a1b; padding:10px; font-weight:700; text-align:center;}
+.movie-img-inner {position:absolute; left:0; top:0; width:100%; height:100%; z-index:100; 
+border:5px solid #97ce68; opacity:0; background-color:rgba(0,0,0,0.6);}
+.movie-img:hover .movie-img-inner {opacity:1;}
+.show-desc {position:absolute; right:0; top:0; z-index:150; font-size:18px !important; cursor:pointer; border-radius:0 0 0 3px;
+background-color:#fff; color:#cc3300; width:30px; height:30px; line-height:30px !important; text-align:center;}
+.go-watch {position:absolute; left:50%; top:50%; margin:-28px 0 0 -28px; 
+height:56px; width:56px; font-size:60px !important; color:#97ce68; opacity:0.8; cursor:pointer;}
+.go-watch:hover {opacity:1;}
+.movie-img > span {position:absolute; top:0; left:0; z-index:30; display:inline-block; line-height:30px; 
+background-color:#00457b; color:#fff; padding:0 10px; font-size:14px; border-radius:0 0 3px 0;}
+.movie-title {display:block; margin:10px 0 3px 0; height:36px; overflow:hidden; color:#333;}
+.movie-title:hover, .movie-tags a:hover {text-decoration:underline;}
+.movie-tags a, .movie-tags {color:#06c; font-size:12px;}
+
+.movie-desc {position:absolute; left:100%; top:5%; z-index:150; width:350px; padding:20px; background-color:#FFF; 
+display:none; box-shadow:0 0 15px 0 rgba(0,0,0,0.3); min-height:80px; border-radius:4px;}
+.pop-left .movie-desc {left:auto; right:35px;}
+.movie-desc:before {right: 100%;top:45px;content: " ";height: 0;width: 0;
+position: absolute;border-top:30px solid #fff; border-left:30px solid transparent}
+.pop-left .movie-desc:before {left: 100%;right:auto; border-left:0; border-right:30px solid transparent;}
+.movie-date {font-style:italic; color:#9B9B9B; margin-bottom:10px;}
+.movie-director {margin-bottom:10px; font-size:14px;}
+.movie-actor {margin-bottom:10px; font-size:14px; color:#9B9B9B;}
+.movie-year {margin-bottom:10px; font-size:14px; color:#9B9B9B;}
+.movie-rejis {margin-bottom:10px; font-size:14px; color:#9B9B9B;}
+
+.movie-text {margin-top:10px; color:#5c5c5c; line-height:18px; border-top:1px dashed #e3e3e3; padding-top:10px; margin-bottom:10px;}
+.movie-quality {display:inline-block; margin-top:15px; background-color:#1dd2af; color:#FFF; padding:10px; 
+font-size:14px; font-weight:700; text-transform:uppercase;}
+.movie-desc a {text-decoration:underline;}
+.movie-rate {display:inline-block; height:40px; padding:0 15px 0 0; line-height:40px; font-size:18px; background-color:#f5f5f5; border-radius:20px;}
+.movie-rate i {margin-right:10px; width:40px; height:40px; line-height:40px !important; text-align:center; 
+border-radius:20px; background-color:#97ce68; color:#fff;}
+.movie-rate.s-negative i {background-color:#ed6037;}
+
+.movie-kp {display:inline-block; height:40px; padding:0 15px 0 0; line-height:40px; font-size:18px; background-color:#f5f5f5; border-radius:20px;}
+.movie-kp i {margin-right:10px; width:40px; height:40px; line-height:40px !important; text-align:center; 
+border-radius:20px; background-color:#97ce68; color:#fff;}
+
+/* CAROU TOP
+----------------------------------------------- */
+.tcarusel.carou-top {padding:20px 0 0 22px; height:350px; color:#fff; background-color:#4a586e;}
+.carou-top .tcarusel-next {right:20px; top:20px;}
+.carou-top .tcarusel-prev {right:60px; top:20px;}
+.carou-top .mov-t {color:#fff;}
+.carou-top .mov-c {color:#ccc;}
+.carou-top .tcarusel-item {width:135px; margin:0 20.2px 0 0;}
+.carou-top .mov-i {height:200px !important;}

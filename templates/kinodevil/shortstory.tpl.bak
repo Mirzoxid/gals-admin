@@ -1,0 +1,20 @@
+<div class="mov">
+    
+	<div class="mov-i img-box">
+		<img src="{image-1}" alt="{title}" />
+		<div class="mov-mask flex-col ps-link" data-link="{full-link}"><span class="fa fa-play"></span></div>
+			[xfgiven_quality]<div class="mov-m">[xfvalue_quality]</div>[/xfgiven_quality]
+        [rating-type-3]
+		<div class="rate3 clearfix mov-r">
+			<div class="pluss" id="pluss-{news-id}" onclick="doRateLD('plus', '{news-id}');"><span class="fa fa-thumbs-o-up"></span></div>
+			<div class="minuss" id="minuss-{news-id}" onclick="doRateLD('minus', '{news-id}');"><span class="fa fa-thumbs-o-down"></span></div>
+		    {rating}
+		    {vote-num}
+		</div>
+		[/rating-type-3]
+	</div>
+	<a class="mov-t nowrap" href="{full-link}"  title="{title}">{title}</a>
+	<div class="mov-c nowrap">{link-category}</div>
+    <span class="fa fa-eye" aria-hidden="true"> {views}</span>
+    <span class="fa fa-commenting" aria-hidden="true"> {comments-num}</span>
+</div>
