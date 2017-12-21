@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 				$limit = (empty($post->limit)) ? 10 : intval($post->limit);
 				$cnt = ($post->skip >= $count_n->num_rows) ? 0 : $post->post;
 
-				if ($arr = $dle_api->db->query("SELECT dle_post.title, dle_post.id, dle_post.category, dle_post.date,dle_post.short_story, (SELECT e.news_read n_r FROM dle_post_extras e WHERE e.news_id = dle_post.id) news_read FROM dle_post JOIN $type ON dle_post.id = {$type}.post_id {$where} order by news_read desc limit $skip,$limit")) {
+				if ($arr = $dle_api->db->query("SELECT DISTINCT dle_post.title, dle_post.id, dle_post.category, dle_post.date,dle_post.short_story, (SELECT e.news_read n_r FROM dle_post_extras e WHERE e.news_id = dle_post.id) news_read FROM dle_post JOIN $type ON dle_post.id = {$type}.post_id {$where} order by news_read desc limit $skip,$limit")) {
 
 					$arr1 = null;
 					while ($var = $dle_api->db->get_row()) {
@@ -100,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 						"message" => "Table loaded",
 
-						"max_movies_count" => $arr->num_rows,
+						"max_movies_count" => count($arr1),
 
 						"data" => $arr1
 
