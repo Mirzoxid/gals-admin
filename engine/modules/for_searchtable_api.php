@@ -31,23 +31,6 @@
 if (!defined('DATALIFEENGINE')) die("Ruxsatsiz xarakat!");
 
 
-
-function where_popular_table($value=null)
-
-{
-
-	if ($value == null) {
-
-		return false;
-
-	}
-
-
-
-}
-
-
-
 include('engine/api/api.class.php');
 
 	header("Access-Control-Allow-Origin: *");
