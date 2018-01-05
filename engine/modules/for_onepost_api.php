@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $dle_api->db->query("SET NAMES 'utf8'");
 			if ($dle_api->load_table(USERPREFIX . "_token", "*", "token = '".$post->token."'")) {
 
-				if ($arr = $dle_api->load_table(USERPREFIX . "_post", "title, id, category, xfields, `date`", "id = '".$post->id."'", false)) {
+				if ($arr = $dle_api->load_table(USERPREFIX . "_post", "title, id, category, xfields, `date`, short_story", "id = '".$post->id."'", false)) {
                     $dle_api->db->query("SET NAMES 'utf8'");
 					if ($obj = $dle_api->load_table("serials", "name, url, season_id, serial", "post_id = '".$post->id."'", true, 'id', "desc")) {
 						$arr['urls'] = $obj;
