@@ -57,45 +57,51 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 	if (!empty($post) && isset($post->name) && isset($post->email) && isset($post->password1)&& isset($post->password2)) {
 
 		if ($post->password1 === $post->password2 && $post->password1 !== "" && $post->name !== "" && $post->email !== "") {
+            $code = 406;
+            switch ($aa = $dle_api->external_register($post->name, $post->password1, $post->email, 4)) {
 
-			switch ($aa = $dle_api->external_register($post->name, $post->password1, $post->email, 4)) {
+                case 1:
 
-				case 1:
+                    http_response_code(200);
+                    $code = 200;
 
-					$code = 1;
+                    $reg_log = "Accept register";
 
-					$reg_log = "Accept register";
+                    break;
 
-					break;
+                case 2:
 
-				case 2:
+                    http_response_code(406);
+                    $reg_log = "Login exist";
 
-					$reg_log = "Login exist";
+                    break;
 
-					break;
+                case 3:
 
-				case 3:
+                    http_response_code(406);
+                    $reg_log = "Mail exist";
 
-					$reg_log = "Mail exist";
+                    break;
 
-					break;
+                case 4:
 
-				case 4:
+                    http_response_code(406);
+                    $reg_log = "Group error";
 
-					$reg_log = "Group error";
+                    break;
 
-					break;
+                default:
 
-				default:
+                    http_response_code(406);
+                    $reg_log = "Register error";
 
-					$reg_log = "Register error";
+                    break;
 
-					break;
+            }
 
-			}
-
-		} else {
-
+        } else {
+            $code = 401;
+            http_response_code(401);
 			$reg_log = "Password confirm error or null data"; 
 
 		}
@@ -110,9 +116,10 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
 	} else {
 
+        http_response_code(400);
 		$json_arr = [
 
-			'code' => 0,
+			'code' => 400,
 
 			'error' => 'Key error or other )) !' 
 

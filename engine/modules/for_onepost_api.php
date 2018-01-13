@@ -118,9 +118,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 	} else {
 
+        http_response_code(400);
 		$json_arr = [
 
-			"code" => 0,
+			"code" => 400,
 
 			"error" => "Key error or other )) !"
 

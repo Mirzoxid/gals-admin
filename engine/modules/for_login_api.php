@@ -46,26 +46,30 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$_SESSION['dle_password'] = $login['password'];
 			$_SESSION['dle_name'] = $arr['dle_name'] = $login['name'];
 			$_SESSION['dle_email'] = $arr['dle_email'] = $login['email'];
+            http_response_code(200);
 			$json_arr = [
-				'code' => 1,
+				'code' => 200,
 				'message' => 'Login accept!',
 				'data' => $arr
 			];
 		} else {
+            http_response_code(401);
 			$auth_log = "Login or password error!";
 			$json_arr = [
-				'code' => 0,
+				'code' => 401,
 				'error' => 'Login or Password error!'
 			];
 		}
 	} elseif ((isset($post->name) and isset($post->password)) and (empty($post->name) or empty($post->password))) {
+        http_response_code(401);
 		$json_arr = [
-			'code' => 0,
+			'code' => 401,
 			'error' => 'Password or Login is empty!'
 		];
 	} else {
+        http_response_code(400);
 		$json_arr = [
-			'code' => 0,
+			'code' => 400,
 			'error' => 'Key error or other )) !'
 		];
 	}

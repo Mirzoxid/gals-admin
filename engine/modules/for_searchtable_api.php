@@ -92,9 +92,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 						$arr1[] = $var;
 					}
 
+                    http_response_code(200);
 					$json_arr = [
 
-						"code" => 1,
+						"code" => 200,
 
 						"message" => "Table loaded",
 
@@ -106,9 +107,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 				} else {
 
+                    http_response_code(204);
 					$json_arr = [
 
-						"code" => 0,
+						"code" => 204,
 
 						"error" => "Table not loaded! Category, skip or limit undifined!"
 
@@ -120,9 +122,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 			} else {
 
+                http_response_code(401);
 				$json_arr = [
 
-					"code" => 0,
+					"code" => 401,
 
 					"error" => "Wrong token!"
 
@@ -132,9 +135,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 		} else {
 
+            http_response_code(401);
 			$json_arr = [
 
-				"code" => 0,
+				"code" => 401,
 
 				"error" => "Token empty )) !"
 
@@ -144,9 +148,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 	} else {
 
+        http_response_code(400);
 		$json_arr = [
 
-			"code" => 0,
+			"code" => 400,
 
 			"error" => "Key error or other )) !"
 
