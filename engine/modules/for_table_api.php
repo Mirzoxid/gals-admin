@@ -72,11 +72,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 				// $where .=
 				$skip = (empty($post->skip)) ? 0 : intval($post->skip);
 				$limit = (empty($post->limit)) ? 10 : intval($post->limit);
-				if ($dle_api->db->query("SELECT DISTINCT dle_post.title, dle_post.id, dle_post.category, dle_post.descr, dle_post.`date`, dle_post.short_story FROM dle_post RIGHT JOIN {$type} ON dle_post.id = {$type}.post_id {$where} and {$type}.post_id is not null ORDER BY date DESC LIMIT {$skip}, {$limit}")) {
+				if ($dle_api->db->query("SELECT DISTINCT dle_post.title, dle_post.id, dle_post.category, dle_post.descr, dle_post.`date`, dle_post.short_story FROM dle_post RIGHT JOIN {$type} ON dle_post.id = {$type}.post_id {$where} and {$type}.post_id is not null ORDER BY `date` DESC LIMIT {$skip}, {$limit}")) {
 				// var_dump($limit);die;
 					// $arr['img'] = (strpos('/(src="\S+)/', $arr->))
 					$arr = null;
-
 					while($var = $dle_api->db->get_row()){
 						$arr[] = $var;
 					}

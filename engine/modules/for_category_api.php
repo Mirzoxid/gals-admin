@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         $obj = null;
         $arr = [];
-				if ($dle_api->db->query("SELECT id, name FROM dle_category")) {
+				if ($dle_api->db->query("SELECT id, name FROM dle_category WHERE visible = 1")) {
 
           while ($var = $dle_api->db->get_row()) {
             $arr[] = $var;
